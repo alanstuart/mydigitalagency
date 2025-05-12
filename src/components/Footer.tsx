@@ -14,8 +14,8 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Code size={32} className="text-indigo-500" />
               <span className="text-xl font-bold tracking-tight">
-                <span className="text-white">Dev</span>
-                <span className="text-indigo-500">Studio</span>
+                <span className="text-white">Aleph</span>
+                <span className="text-indigo-500">Spark</span>
               </span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -81,8 +81,8 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Mail size={16} className="text-indigo-400 mr-2 mt-1 flex-shrink-0" />
-                <a href="mailto:hello@devstudio.com" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  hello@devstudio.com
+                <a href="mailto:hello@alephspark.com" className="text-gray-400 hover:text-indigo-400 transition-colors">
+                  hello@alephspark.com
                 </a>
               </li>
               <li>
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {currentYear} DevStudio. All rights reserved.
+            &copy; {currentYear} AlephSpark. All rights reserved.
           </p>
           
           <div className="flex space-x-4 text-sm text-gray-500">

@@ -39,8 +39,8 @@ const Header: React.FC = () => {
           <a href="#home" className="flex items-center space-x-2">
             <Code size={32} className="text-indigo-500" />
             <span className="text-xl font-bold tracking-tight">
-              <span className="text-white">Dev</span>
-              <span className="text-indigo-500">Studio</span>
+              <span className="text-white">Aleph</span>
+              <span className="text-indigo-500">Spark</span>
             </span>
           </a>
 
