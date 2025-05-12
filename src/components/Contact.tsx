@@ -152,10 +152,10 @@ const Contact: React.FC = () => {
                           className="w-full bg-gray-800/70 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         >
                           <option value="" disabled>Select your budget range</option>
-                          <option value="£2,500 - £5,000">£2,500 - £5,000</option>
-                          <option value="£5,000 - £10,000">£5,000 - £10,000</option>
-                          <option value="£10,000 - £25,000">£10,000 - £25,000</option>
-                          <option value="£25,000+">£25,000+</option>
+                          <option value="£500 - £1,000">£500 - £1,000</option>
+                          <option value="£1,000 - £2,000">£1,000 - £2,000</option>
+                          <option value="£2,000 - £3,500">£2,000 - £3,500</option>
+                          <option value="Custom">Custom Quote</option>
                         </select>
                       </div>
                       
@@ -172,9 +172,9 @@ const Contact: React.FC = () => {
                           className="w-full bg-gray-800/70 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         >
                           <option value="" disabled>Select project type</option>
-                          <option value="Web Application">Web Application</option>
-                          <option value="Website Development">Website Development</option>
-                          <option value="API Development">API Development</option>
+                          <option value="Basic Website">Basic Website</option>
+                          <option value="Advanced Website">Advanced Website</option>
+                          <option value="Custom Solution">Custom Solution</option>
                           <option value="Technical Consulting">Technical Consulting</option>
                           <option value="Other">Other</option>
                         </select>
