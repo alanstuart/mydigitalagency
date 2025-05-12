@@ -1,38 +1,38 @@
 import React from 'react';
-import { Globe, Workflow, Lightbulb, ArrowUpRight } from 'lucide-react';
+import { Code, Rocket, Lightbulb, ArrowUpRight } from 'lucide-react';
 
 const services = [
   {
-    icon: <Globe size={32} />,
+    icon: <Code size={32} />,
     title: 'Web Development',
-    description: 'We craft responsive, performance-optimized websites that serve as powerful business tools, not just digital brochures.',
+    description: 'Custom web applications and responsive websites built with modern technologies and best practices.',
     benefits: [
-      'Faster load times for better user experience and SEO',
-      'Device-responsive designs that work on all screen sizes',
-      'Strategic UX that guides visitors toward conversion',
-      'Built-in analytics to track user behavior'
+      'Modern React.js applications',
+      'Performance-optimized solutions',
+      'Mobile-first responsive design',
+      'Clean, maintainable code'
     ]
   },
   {
-    icon: <Workflow size={32} />,
-    title: 'SEO Strategy',
-    description: 'Our data-driven approach targets high-intent keywords to attract qualified traffic that\'s ready to convert.',
+    icon: <Rocket size={32} />,
+    title: 'Technical Consulting',
+    description: 'Expert guidance on technology choices, architecture decisions, and development best practices.',
     benefits: [
-      'Targeted keyword research based on business goals',
-      'Technical SEO for improved search visibility',
-      'Local SEO optimization for geographic targeting',
-      'Regular performance reporting with actionable insights'
+      'Technology stack recommendations',
+      'Code review and optimization',
+      'Performance audits',
+      'Security best practices'
     ]
   },
   {
     icon: <Lightbulb size={32} />,
-    title: 'Conversion Copywriting',
-    description: 'We create compelling content that speaks directly to your ideal customers, addressing their pain points and motivating action.',
+    title: 'Custom Solutions',
+    description: 'Tailored development solutions that solve your unique business challenges.',
     benefits: [
-      'Messaging that resonates with your target audience',
-      'Clear value propositions that differentiate your business',
-      'Strategic calls-to-action that increase conversion rates',
-      'Brand voice consistency across all platforms'
+      'API development and integration',
+      'Database design and optimization',
+      'Third-party service integration',
+      'Technical documentation'
     ]
   }
 ];
@@ -43,10 +43,10 @@ const Services: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading-lg mb-4">
-            Complete <span className="gradient-text">Digital Solutions</span> for Business Growth
+            Expert <span className="gradient-text">Development Services</span>
           </h2>
           <p className="text-gray-300">
-            Our integrated approach ensures all elements of your digital presence work together to achieve measurable business results.
+            Transforming ideas into powerful, scalable web applications with modern technologies and best practices.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
               <h3 className="heading-sm mb-4">{service.title}</h3>
               <p className="text-gray-300 mb-6">{service.description}</p>
               
-              <h4 className="font-semibold text-indigo-400 mb-3">Business Impact:</h4>
+              <h4 className="font-semibold text-indigo-400 mb-3">Key Features:</h4>
               <ul className="space-y-2 mb-6">
                 {service.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-start">
@@ -73,7 +73,7 @@ const Services: React.FC = () => {
               </ul>
               
               <a 
-                href="#packages" 
+                href="#contact" 
                 className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
               >
                 Learn more <ArrowUpRight size={16} className="ml-1" />
@@ -83,8 +83,8 @@ const Services: React.FC = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <a href="#packages" className="btn btn-primary">
-            Explore Our Service Packages
+          <a href="#contact" className="btn btn-primary">
+            Discuss Your Project
           </a>
         </div>
       </div>

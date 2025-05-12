@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { GlobeIcon, Menu, X } from 'lucide-react';
+import { Code, Menu, X } from 'lucide-react';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,9 +21,7 @@ const Header: React.FC = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
-    { name: 'Packages', href: '#packages' },
     { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Testimonials', href: '#testimonials' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -39,10 +37,10 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" className="flex items-center space-x-2">
-            <GlobeIcon size={32} className="text-indigo-500" />
+            <Code size={32} className="text-indigo-500" />
             <span className="text-xl font-bold tracking-tight">
-              <span className="text-white">Quant</span>
-              <span className="text-indigo-500">nex</span>
+              <span className="text-white">Dev</span>
+              <span className="text-indigo-500">Studio</span>
             </span>
           </a>
 
@@ -65,7 +63,7 @@ const Header: React.FC = () => {
               href="#contact" 
               className="btn btn-primary text-sm"
             >
-              Get Started
+              Start Project
             </a>
           </div>
 
@@ -99,7 +97,7 @@ const Header: React.FC = () => {
                 className="btn btn-primary text-center mt-4"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Get Started
+                Start Project
               </a>
             </nav>
           </div>
