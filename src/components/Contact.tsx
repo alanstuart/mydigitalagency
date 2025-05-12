@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     company: '',
     budget: '',
     projectType: '',
@@ -24,17 +23,14 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would send the form data to a server
     console.log('Form submitted:', formData);
     setFormSubmitted(true);
     
-    // Reset form after 5 seconds
     setTimeout(() => {
       setFormSubmitted(false);
       setFormData({
         name: '',
         email: '',
-        phone: '',
         company: '',
         budget: '',
         projectType: '',
@@ -48,10 +44,10 @@ const Contact: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading-lg mb-4">
-            Ready to <span className="gradient-text">Transform</span> Your Digital Presence?
+            Ready to <span className="gradient-text">Transform</span> Your Project?
           </h2>
           <p className="text-gray-300">
-            Let's discuss how we can help you achieve measurable growth through strategic digital solutions.
+            Let's discuss how we can help you build something amazing.
           </p>
         </div>
 
@@ -68,43 +64,11 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-indigo-400 font-medium mb-1">Email Us</h4>
-                    <a href="mailto:hello@quantnexsolutions.com" className="text-gray-300 hover:text-white transition-colors">
-                      hello@quantnexsolutions.com
+                    <a href="mailto:hello@devstudio.com" className="text-gray-300 hover:text-white transition-colors">
+                      hello@devstudio.com
                     </a>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-indigo-900/50 flex items-center justify-center text-indigo-400 mr-4 flex-shrink-0">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-indigo-400 font-medium mb-1">Call Us</h4>
-                    <a href="tel:+441234567890" className="text-gray-300 hover:text-white transition-colors">
-                      +44 123 456 7890
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-10 h-10 rounded-full bg-indigo-900/50 flex items-center justify-center text-indigo-400 mr-4 flex-shrink-0">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-indigo-400 font-medium mb-1">Visit Us</h4>
-                    <address className="not-italic text-gray-300">
-                      123 Tech Hub Street<br />
-                      London, UK EC1V 4PW
-                    </address>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-12">
-                <h4 className="font-semibold mb-3">Office Hours</h4>
-                <p className="text-gray-300">Monday - Friday: 9am - 6pm</p>
-                <p className="text-gray-300">Saturday: 10am - 2pm</p>
-                <p className="text-gray-300">Sunday: Closed</p>
               </div>
             </div>
           </div>
@@ -115,7 +79,7 @@ const Contact: React.FC = () => {
               {formSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 bg-indigo-900/50 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle size={32} className="text-indigo-500" />
+                    <Mail size={32} className="text-indigo-500" />
                   </div>
                   <h3 className="heading-md mb-4">Message Sent Successfully!</h3>
                   <p className="text-gray-300 mb-6">
@@ -161,21 +125,6 @@ const Contact: React.FC = () => {
                       </div>
                       
                       <div>
-                        <label htmlFor="phone" className="block text-gray-300 mb-2">
-                          Phone Number
-                        </label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          className="w-full bg-gray-800/70 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                          placeholder="e.g. +44 123 456 7890"
-                        />
-                      </div>
-                      
-                      <div>
                         <label htmlFor="company" className="block text-gray-300 mb-2">
                           Company Name
                         </label>
@@ -203,10 +152,10 @@ const Contact: React.FC = () => {
                           className="w-full bg-gray-800/70 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         >
                           <option value="" disabled>Select your budget range</option>
-                          <option value="£250 - £500">£250 - £500</option>
-                          <option value="£500 - £1,000">£500 - £1,000</option>
-                          <option value="£1,000 - £2,500">£1,000 - £2,500</option>
-                          <option value="£2,500+">£2,500+</option>
+                          <option value="£2,500 - £5,000">£2,500 - £5,000</option>
+                          <option value="£5,000 - £10,000">£5,000 - £10,000</option>
+                          <option value="£10,000 - £25,000">£10,000 - £25,000</option>
+                          <option value="£25,000+">£25,000+</option>
                         </select>
                       </div>
                       
@@ -223,10 +172,10 @@ const Contact: React.FC = () => {
                           className="w-full bg-gray-800/70 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                         >
                           <option value="" disabled>Select project type</option>
-                          <option value="Web Development">Web Development</option>
-                          <option value="SEO Strategy">SEO Strategy</option>
-                          <option value="Copywriting">Copywriting</option>
-                          <option value="Complete Digital Solution">Complete Digital Solution</option>
+                          <option value="Web Application">Web Application</option>
+                          <option value="Website Development">Website Development</option>
+                          <option value="API Development">API Development</option>
+                          <option value="Technical Consulting">Technical Consulting</option>
                           <option value="Other">Other</option>
                         </select>
                       </div>
