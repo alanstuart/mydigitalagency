@@ -23,7 +23,23 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Create email content
+    const subject = `New Project Inquiry from ${formData.name}`;
+    const body = `
+Name: ${formData.name}
+Email: ${formData.email}
+Company: ${formData.company}
+Budget Range: ${formData.budget}
+Project Type: ${formData.projectType}
+
+Message:
+${formData.message}
+    `.trim();
+
+    // Open mailto link
+    window.location.href = `mailto:alan.s.holding@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
     setFormSubmitted(true);
     
     setTimeout(() => {
