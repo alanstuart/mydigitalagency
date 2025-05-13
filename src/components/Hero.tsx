@@ -13,15 +13,15 @@ const Hero: React.FC = () => {
             </div>
             
             <h1 className="heading-xl mb-6">
-              <span className="block">Building</span> 
-              <span className="gradient-text">Powerful Web</span> 
-              <span className="block">Solutions for</span>
-              <span className="gradient-text">Your Success</span>
+              <span className="block">From concept</span> 
+              <span className="gradient-text">to code</span> 
+              <span className="block">built to</span>
+              <span className="gradient-text">perform</span>
             </h1>
             
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Transforming ideas into powerful web applications using modern technologies and best practices. 
-              Let's build something amazing together.
+              We transform ideas into fast, modern web applications using today's best technologies.
+              Let's build something exceptional together.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
