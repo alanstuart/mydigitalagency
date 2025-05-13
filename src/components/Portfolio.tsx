@@ -15,7 +15,7 @@ const projects = [
       'User-friendly interface'
     ],
     status: 'In Development',
-    link: 'https://supernelo.com',
+    link: 'https://bmsupernelo.com',
   },
   {
     id: 2,
