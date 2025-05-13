@@ -19,15 +19,15 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Alan Holding',
-    category: 'Corporate Website',
+    title: 'Alan Holding Portfolio',
+    category: 'Professional Website',
     image: 'https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Corporate website for Alan Holding, showcasing the company\'s services and portfolio. Features a modern design with emphasis on user experience.',
+    description: 'Professional portfolio website showcasing my experience, skills, and achievements in web development and technical consulting.',
     features: [
       'Modern React implementation',
       'Responsive design',
-      'Portfolio showcase',
-      'Contact forms'
+      'Project showcase',
+      'Professional branding'
     ],
     status: 'Live',
     link: 'https://alanholding.co.uk',
@@ -42,7 +42,7 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading-lg mb-4">
-            My <span className="gradient-text">Projects</span>
+            Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-gray-300">
             Here are some of the real-world projects I've worked on. Each project represents my commitment to creating effective web solutions.

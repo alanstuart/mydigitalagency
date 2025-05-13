@@ -1,38 +1,38 @@
 import React from 'react';
-import { Code, Rocket, Lightbulb, ArrowUpRight } from 'lucide-react';
+import { Code, Globe, Lightbulb, ArrowUpRight } from 'lucide-react';
 
 const services = [
   {
-    icon: <Code size={32} />,
-    title: 'Web Development',
-    description: 'Custom web applications and responsive websites built with modern technologies and best practices.',
+    icon: <Globe size={32} />,
+    title: 'Basic Websites',
+    description: 'Simple, effective websites perfect for small businesses and personal portfolios.',
     benefits: [
-      'Modern React.js applications',
-      'Performance-optimized solutions',
-      'Mobile-first responsive design',
-      'Clean, maintainable code'
+      'Clean, modern designs',
+      'Mobile-friendly layouts',
+      'Contact forms',
+      'Easy to maintain'
     ]
   },
   {
-    icon: <Rocket size={32} />,
-    title: 'Technical Consulting',
-    description: 'Expert guidance on technology choices, architecture decisions, and development best practices.',
+    icon: <Code size={32} />,
+    title: 'Advanced Development',
+    description: 'Custom web applications and complex websites built with modern technologies.',
     benefits: [
-      'Technology stack recommendations',
-      'Code review and optimization',
-      'Performance audits',
-      'Security best practices'
+      'Custom functionality',
+      'Database integration',
+      'API development',
+      'Performance optimization'
     ]
   },
   {
     icon: <Lightbulb size={32} />,
-    title: 'Custom Solutions',
-    description: 'Tailored development solutions that solve your unique business challenges.',
+    title: 'Technical Consulting',
+    description: 'Expert guidance on technology choices and development best practices.',
     benefits: [
-      'API development and integration',
-      'Database design and optimization',
-      'Third-party service integration',
-      'Technical documentation'
+      'Technology recommendations',
+      'Code review',
+      'Performance audits',
+      'Best practices guidance'
     ]
   }
 ];
@@ -46,7 +46,7 @@ const Services: React.FC = () => {
             Expert <span className="gradient-text">Development Services</span>
           </h2>
           <p className="text-gray-300">
-            Transforming ideas into powerful, scalable web applications with modern technologies and best practices.
+            From simple websites to complex web applications, I deliver solutions that match your needs and budget.
           </p>
         </div>
 
