@@ -1,36 +1,36 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink, ShoppingCart, Code, Rocket } from 'lucide-react';
+import { ArrowRight, ExternalLink, ShoppingCart, Globe, Code } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
     title: 'BM Supernelo E-commerce',
-    category: 'Web Development',
+    category: 'E-commerce Development',
     image: 'https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A modern e-commerce website for BM Supernelo, a supermarket in Costa Rica. The website allows customers to browse products and place orders online.',
+    description: 'A modern e-commerce website for BM Supernelo, a supermarket in Costa Rica. The website enables customers to browse products and place orders online.',
     features: [
       'Online product catalog',
       'Shopping cart functionality',
-      'Responsive design for all devices',
-      'Modern user interface'
+      'Responsive design',
+      'User-friendly interface'
     ],
     status: 'In Development',
-    link: '#',
+    link: 'https://supernelo.com',
   },
   {
     id: 2,
-    title: 'Personal Portfolio',
-    category: 'Web Development',
-    image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'My personal portfolio website showcasing my journey as a web developer and the projects I\'ve worked on.',
+    title: 'Alan Holding',
+    category: 'Corporate Website',
+    image: 'https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    description: 'Corporate website for Alan Holding, showcasing the company\'s services and portfolio. Features a modern design with emphasis on user experience.',
     features: [
-      'React.js implementation',
+      'Modern React implementation',
       'Responsive design',
-      'Modern animations',
-      'Project showcase'
+      'Portfolio showcase',
+      'Contact forms'
     ],
-    status: 'Completed',
-    link: '#',
+    status: 'Live',
+    link: 'https://alanholding.co.uk',
   }
 ];
 
@@ -45,7 +45,7 @@ const Portfolio: React.FC = () => {
             My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-gray-300">
-            While I'm early in my development journey, I'm passionate about creating impactful web solutions. Here are some of the projects I'm working on.
+            Here are some of the real-world projects I've worked on. Each project represents my commitment to creating effective web solutions.
           </p>
         </div>
 
@@ -69,6 +69,13 @@ const Portfolio: React.FC = () => {
                     {project.title}
                   </h3>
                   <p className="text-gray-400 text-sm">{project.category}</p>
+                  <span className={`text-xs px-2 py-1 rounded-full mt-2 inline-block ${
+                    project.status === 'Live' 
+                      ? 'bg-green-900/30 text-green-400'
+                      : 'bg-amber-900/30 text-amber-400'
+                  }`}>
+                    {project.status}
+                  </span>
                 </button>
               ))}
             </div>
@@ -112,17 +119,21 @@ const Portfolio: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-indigo-400">Status: {activeProject.status}</span>
-                  {activeProject.status === 'Completed' && (
-                    <a 
-                      href={activeProject.link} 
-                      className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      View Project <ExternalLink size={16} className="ml-1" />
-                    </a>
-                  )}
+                  <span className={`px-3 py-1 rounded-full ${
+                    activeProject.status === 'Live'
+                      ? 'bg-green-900/30 text-green-400'
+                      : 'bg-amber-900/30 text-amber-400'
+                  }`}>
+                    {activeProject.status}
+                  </span>
+                  <a 
+                    href={activeProject.link} 
+                    className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visit Website <ExternalLink size={16} className="ml-1" />
+                  </a>
                 </div>
               </div>
             </div>
