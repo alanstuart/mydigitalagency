@@ -1,38 +1,38 @@
 import React from 'react';
-import { Code, Globe, Lightbulb, ArrowUpRight } from 'lucide-react';
+import { Globe, Layout, Lightbulb, ArrowUpRight } from 'lucide-react';
 
 const services = [
   {
     icon: <Globe size={32} />,
-    title: 'Basic Websites',
-    description: 'Simple, effective websites perfect for small businesses and personal portfolios.',
+    title: 'Simple Websites',
+    description: 'Clean, modern websites that work perfectly for small businesses and personal projects.',
     benefits: [
-      'Clean, modern designs',
-      'Mobile-friendly layouts',
+      'Easy to update content',
+      'Mobile-friendly design',
       'Contact forms',
-      'Easy to maintain'
+      'Social media links'
     ]
   },
   {
-    icon: <Code size={32} />,
-    title: 'Advanced Development',
-    description: 'Custom web applications and complex websites built with modern technologies.',
+    icon: <Layout size={32} />,
+    title: 'Business Websites',
+    description: 'Professional websites that help your business look great online.',
     benefits: [
-      'Custom functionality',
-      'Database integration',
-      'API development',
-      'Performance optimization'
+      'Professional design',
+      'Product showcases',
+      'Business hours',
+      'Location maps'
     ]
   },
   {
     icon: <Lightbulb size={32} />,
-    title: 'Technical Consulting',
-    description: 'Expert guidance on technology choices and development best practices.',
+    title: 'Website Updates',
+    description: 'Keep your existing website fresh and working well with regular updates and improvements.',
     benefits: [
-      'Technology recommendations',
-      'Code review',
-      'Performance audits',
-      'Best practices guidance'
+      'Content updates',
+      'New features',
+      'Performance fixes',
+      'Regular maintenance'
     ]
   }
 ];
@@ -43,10 +43,10 @@ const Services: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading-lg mb-4">
-            Expert <span className="gradient-text">Development Services</span>
+            Clean, Modern <span className="gradient-text">Websites</span>
           </h2>
           <p className="text-gray-300">
-            From simple websites to complex web applications, I deliver solutions that match your needs and budget.
+            We build simple, effective websites that work well and look great.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ const Services: React.FC = () => {
               <h3 className="heading-sm mb-4">{service.title}</h3>
               <p className="text-gray-300 mb-6">{service.description}</p>
               
-              <h4 className="font-semibold text-indigo-400 mb-3">Key Features:</h4>
+              <h4 className="font-semibold text-indigo-400 mb-3">Features:</h4>
               <ul className="space-y-2 mb-6">
                 {service.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-start">
@@ -84,7 +84,7 @@ const Services: React.FC = () => {
 
         <div className="mt-16 text-center">
           <a href="#contact" className="btn btn-primary">
-            Discuss Your Project
+            Start Your Website
           </a>
         </div>
       </div>
