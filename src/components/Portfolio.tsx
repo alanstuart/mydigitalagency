@@ -1,46 +1,37 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, ShoppingCart, Code, Rocket } from 'lucide-react';
 
 const projects = [
   {
     id: 1,
-    title: 'TechVision Rebrand',
-    category: 'Web Development & SEO',
-    image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Complete digital transformation for a software company, including new website, SEO strategy, and content marketing.',
-    results: [
-      '156% increase in organic traffic within 6 months',
-      '42% improvement in lead quality',
-      '3.2x ROI on digital marketing spend'
+    title: 'BM Supernelo E-commerce',
+    category: 'Web Development',
+    image: 'https://images.pexels.com/photos/264547/pexels-photo-264547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    description: 'A modern e-commerce website for BM Supernelo, a supermarket in Costa Rica. The website allows customers to browse products and place orders online.',
+    features: [
+      'Online product catalog',
+      'Shopping cart functionality',
+      'Responsive design for all devices',
+      'Modern user interface'
     ],
+    status: 'In Development',
     link: '#',
   },
   {
     id: 2,
-    title: 'GreenEarth E-commerce',
-    category: 'Web Development & Copywriting',
-    image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Custom e-commerce solution with strategic product descriptions and conversion-focused user experience.',
-    results: [
-      '87% increase in conversion rate',
-      '£24,000 additional monthly revenue',
-      '35% reduction in cart abandonment'
+    title: 'Personal Portfolio',
+    category: 'Web Development',
+    image: 'https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    description: 'My personal portfolio website showcasing my journey as a web developer and the projects I\'ve worked on.',
+    features: [
+      'React.js implementation',
+      'Responsive design',
+      'Modern animations',
+      'Project showcase'
     ],
+    status: 'Completed',
     link: '#',
-  },
-  {
-    id: 3,
-    title: 'MindfulHealth Local SEO',
-    category: 'SEO & Content Strategy',
-    image: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'Comprehensive local SEO campaign for a wellness clinic, including content strategy and local citation building.',
-    results: [
-      '314% increase in Google Business profile views',
-      '215% more website bookings in 3 months',
-      'First page rankings for 28 targeted local keywords'
-    ],
-    link: '#',
-  },
+  }
 ];
 
 const Portfolio: React.FC = () => {
@@ -51,10 +42,10 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="heading-lg mb-4">
-            Our <span className="gradient-text">Success Stories</span>
+            My <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-gray-300">
-            We don't just build websites — we create digital assets that measurably improve your business performance.
+            While I'm early in my development journey, I'm passionate about creating impactful web solutions. Here are some of the projects I'm working on.
           </p>
         </div>
 
@@ -84,7 +75,7 @@ const Portfolio: React.FC = () => {
             
             <div className="mt-8">
               <a href="#contact" className="btn btn-secondary w-full">
-                Discuss Your Project <ArrowRight size={16} className="ml-2" />
+                Start Your Project <ArrowRight size={16} className="ml-2" />
               </a>
             </div>
           </div>
@@ -109,25 +100,30 @@ const Portfolio: React.FC = () => {
                 <p className="text-gray-300 mb-6">{activeProject.description}</p>
                 
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-indigo-400 mb-3">Measurable Results:</h4>
+                  <h4 className="text-lg font-semibold text-indigo-400 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {activeProject.results.map((result, index) => (
+                    {activeProject.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
                         <span className="text-indigo-500 mr-2">•</span>
-                        <span className="text-gray-300">{result}</span>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-                
-                <a 
-                  href={activeProject.link} 
-                  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View full case study <ExternalLink size={16} className="ml-1" />
-                </a>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-indigo-400">Status: {activeProject.status}</span>
+                  {activeProject.status === 'Completed' && (
+                    <a 
+                      href={activeProject.link} 
+                      className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Project <ExternalLink size={16} className="ml-1" />
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           </div>
