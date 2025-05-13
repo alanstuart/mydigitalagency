@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Monitor, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Monitor, Code, Zap } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
@@ -9,43 +9,42 @@ const Hero: React.FC = () => {
           <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-900/30 border border-indigo-700/50 text-indigo-400 text-sm mb-6">
               <span className="animate-pulse-slow mr-2 h-2 w-2 rounded-full bg-indigo-500"></span>
-              Next Generation Digital Agency
+              Modern Web Development
             </div>
             
             <h1 className="heading-xl mb-6">
-              <span className="block">Next-Level</span> 
-              <span className="gradient-text">Digital Solutions</span> 
-              <span className="block">That Drive</span>
-              <span className="gradient-text">Measurable Growth</span>
+              <span className="block">Building</span> 
+              <span className="gradient-text">Powerful Web</span> 
+              <span className="block">Solutions for</span>
+              <span className="gradient-text">Your Success</span>
             </h1>
             
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              We connect businesses with their ideal customers through strategic digital presence. 
-              Our data-driven approach creates digital assets that actively generate revenue and growth 
-              opportunities through innovative design, optimization, and persuasive content.
+              Transforming ideas into powerful web applications using modern technologies and best practices. 
+              Let's build something amazing together.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-              <a href="#packages" className="btn btn-primary">
-                View Our Packages <ArrowRight size={20} className="ml-2" />
+              <a href="#contact" className="btn btn-primary">
+                Start Your Project <ArrowRight size={20} className="ml-2" />
               </a>
               <a href="#portfolio" className="btn btn-secondary">
-                See Our Work
+                View Portfolio
               </a>
             </div>
             
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex items-center space-x-2">
                 <Monitor className="text-indigo-400" size={20} />
-                <span className="text-gray-300">Stunning Websites</span>
+                <span className="text-gray-300">Modern Web Apps</span>
               </div>
               <div className="flex items-center space-x-2">
-                <TrendingUp className="text-indigo-400" size={20} />
-                <span className="text-gray-300">Results-Driven SEO</span>
+                <Code className="text-indigo-400" size={20} />
+                <span className="text-gray-300">Clean Code</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="text-indigo-400" size={20} />
-                <span className="text-gray-300">Conversion Copy</span>
+                <span className="text-gray-300">Fast Performance</span>
               </div>
             </div>
           </div>
@@ -62,8 +61,8 @@ const Hero: React.FC = () => {
               
               {/* Stats Overlay */}
               <div className="absolute bottom-8 right-8 glass-card p-4 max-w-[240px]">
-                <div className="text-3xl font-bold mb-1 gradient-text">98%</div>
-                <div className="text-gray-300 text-sm">Client satisfaction rate based on tangible business outcomes</div>
+                <div className="text-3xl font-bold mb-1 gradient-text">5+ Years</div>
+                <div className="text-gray-300 text-sm">Experience in web development and technical solutions</div>
               </div>
             </div>
             

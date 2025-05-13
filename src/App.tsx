@@ -3,10 +3,7 @@ import { ErrorBoundary } from 'react-error-boundary';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import Packages from './components/Packages';
 import Portfolio from './components/Portfolio';
-import Testimonials from './components/Testimonials';
-import SpecialOffer from './components/SpecialOffer';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ParticleBackground from './components/ParticleBackground';
@@ -16,7 +13,7 @@ const App: React.FC = () => {
   const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {
-    document.title = "Quantnex Solutions | Next-Level Digital Solutions";
+    document.title = "AlephSpark | Modern Web Development Solutions";
     // Delay particle background initialization
     const timer = setTimeout(() => {
       setShowParticles(true);
@@ -39,10 +36,7 @@ const App: React.FC = () => {
         <main>
           <Hero />
           <Services />
-          <Packages />
           <Portfolio />
-          <Testimonials />
-          <SpecialOffer />
           <Contact />
         </main>
         <Footer />
