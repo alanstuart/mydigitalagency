@@ -19,10 +19,6 @@ const Hero: React.FC = () => {
               <span className="gradient-text">just work</span>
             </h1>
             
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              We build clean, modern websites that just work.
-            </p>
-            
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <a href="#contact" className="btn btn-primary">
                 Start Your Project <ArrowRight size={20} className="ml-2" />
