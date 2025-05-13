@@ -9,19 +9,18 @@ const Hero: React.FC = () => {
           <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-900/30 border border-indigo-700/50 text-indigo-400 text-sm mb-6">
               <span className="animate-pulse-slow mr-2 h-2 w-2 rounded-full bg-indigo-500"></span>
-              Modern Web Development
+              Web Development
             </div>
             
             <h1 className="heading-xl mb-6">
-              <span className="block">From concept</span> 
-              <span className="gradient-text">to code</span> 
-              <span className="block">built to</span>
-              <span className="gradient-text">perform</span>
+              <span className="block">We build</span> 
+              <span className="gradient-text">clean, modern</span> 
+              <span className="block">websites that</span>
+              <span className="gradient-text">just work</span>
             </h1>
             
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              We transform ideas into fast, modern web applications using today's best technologies.
-              Let's build something exceptional together.
+              We build clean, modern websites that just work.
             </p>
             
             <div className="flex flex-col sm:flex-row justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
@@ -36,15 +35,15 @@ const Hero: React.FC = () => {
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6">
               <div className="flex items-center space-x-2">
                 <Monitor className="text-indigo-400" size={20} />
-                <span className="text-gray-300">Modern Web Apps</span>
+                <span className="text-gray-300">Clean Design</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Code className="text-indigo-400" size={20} />
-                <span className="text-gray-300">Clean Code</span>
+                <span className="text-gray-300">Modern Code</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Zap className="text-indigo-400" size={20} />
-                <span className="text-gray-300">Fast Performance</span>
+                <span className="text-gray-300">Fast Loading</span>
               </div>
             </div>
           </div>
@@ -58,12 +57,6 @@ const Hero: React.FC = () => {
               <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-indigo-500/20 backdrop-blur-sm rounded-xl border border-indigo-500/30 animate-float-slow"></div>
               <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-purple-500/20 backdrop-blur-sm rounded-xl border border-purple-500/30 animate-float"></div>
               <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-cyan-500/20 backdrop-blur-sm rounded-xl border border-cyan-500/30 animate-float-fast"></div>
-              
-              {/* Stats Overlay */}
-              <div className="absolute bottom-8 right-8 glass-card p-4 max-w-[240px]">
-                <div className="text-3xl font-bold mb-1 gradient-text">5+ Years</div>
-                <div className="text-gray-300 text-sm">Experience in web development and technical solutions</div>
-              </div>
             </div>
             
             {/* Decorative Elements */}
