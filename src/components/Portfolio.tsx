@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, ExternalLink, ShoppingCart, Globe, Code } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 
 const projects = [
   {
