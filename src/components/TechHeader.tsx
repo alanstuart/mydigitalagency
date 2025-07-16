@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Terminal, Menu, X, Zap } from 'lucide-react';
+import FuturisticToggle from './FuturisticToggle';
 
 const TechHeader: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,10 +60,13 @@ const TechHeader: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <button className="cyber-btn text-sm">
-              <Zap size={16} className="inline mr-2" />
-              Initialize
-            </button>
+            <div className="flex items-center space-x-4">
+              <FuturisticToggle onToggle={(isDayMode) => console.log('Mode:', isDayMode ? 'Day' : 'Night')} />
+              <button className="cyber-btn text-sm">
+                <Zap size={16} className="inline mr-2" />
+                Initialize
+              </button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,6 +101,9 @@ const TechHeader: React.FC = () => {
                 <Zap size={16} className="inline mr-2" />
                 Initialize
               </button>
+              <div className="mt-4 flex justify-center">
+                <FuturisticToggle onToggle={(isDayMode) => console.log('Mode:', isDayMode ? 'Day' : 'Night')} />
+              </div>
             </nav>
           </div>
         </div>

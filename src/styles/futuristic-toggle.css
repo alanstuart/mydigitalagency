@@ -1,0 +1,455 @@
+/* Futuristic Day/Night Toggle Styles - Year 3000 Aesthetic */
+
+.futuristic-toggle-container {
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+}
+
+/* Main Toggle Button */
+.futuristic-toggle {
+  position: relative;
+  width: 200px;
+  height: 80px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 40px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* 3D Depth Effect */
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+/* Background Layers */
+.toggle-background {
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.gradient-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  transition: all 0.5s ease;
+}
+
+/* Day Mode Background */
+.futuristic-toggle.day-mode .gradient-layer {
+  background: linear-gradient(135deg, 
+    #ffd700 0%, 
+    #ffed4e 25%, 
+    #ff8c00 50%, 
+    #ffa500 75%, 
+    #ff6b35 100%
+  );
+  box-shadow: 
+    inset 0 2px 10px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 10px rgba(255, 140, 0, 0.3),
+    0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+/* Night Mode Background */
+.futuristic-toggle.night-mode .gradient-layer {
+  background: linear-gradient(135deg, 
+    #0f0f23 0%, 
+    #1a1a2e 25%, 
+    #16213e 50%, 
+    #0f3460 75%, 
+    #533483 100%
+  );
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 212, 255, 0.2),
+    inset 0 -2px 10px rgba(83, 52, 131, 0.3),
+    0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+/* Holographic Layer */
+.holographic-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 40px;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.1) 50%, 
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: holographic-shift 3s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes holographic-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Toggle Track */
+.toggle-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.track-glow {
+  position: absolute;
+  inset: 4px;
+  border-radius: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.futuristic-toggle.day-mode .track-glow {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.futuristic-toggle.night-mode .track-glow {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+}
+
+/* Toggle Thumb */
+.toggle-thumb {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform-style: preserve-3d;
+  z-index: 10;
+}
+
+.toggle-thumb.day-position {
+  left: calc(100% - 72px);
+  transform: translateX(0) rotateY(0deg);
+}
+
+.toggle-thumb.night-position {
+  left: 8px;
+  transform: translateX(0) rotateY(180deg);
+}
+
+.thumb-glow {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.futuristic-toggle.day-mode .thumb-glow {
+  background: radial-gradient(circle, 
+    rgba(255, 215, 0, 0.4) 0%, 
+    rgba(255, 140, 0, 0.2) 50%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 40px rgba(255, 215, 0, 0.6);
+}
+
+.futuristic-toggle.night-mode .thumb-glow {
+  background: radial-gradient(circle, 
+    rgba(0, 212, 255, 0.4) 0%, 
+    rgba(176, 38, 255, 0.2) 50%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+}
+
+.thumb-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.futuristic-toggle.day-mode .thumb-inner {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.9) 0%, 
+    rgba(255, 215, 0, 0.8) 100%
+  );
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 
+    inset 0 2px 10px rgba(255, 255, 255, 0.3),
+    0 4px 20px rgba(255, 215, 0, 0.4);
+}
+
+.futuristic-toggle.night-mode .thumb-inner {
+  background: linear-gradient(135deg, 
+    rgba(15, 15, 35, 0.9) 0%, 
+    rgba(0, 212, 255, 0.3) 100%
+  );
+  border-color: rgba(0, 212, 255, 0.6);
+  box-shadow: 
+    inset 0 2px 10px rgba(0, 212, 255, 0.2),
+    0 4px 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Icons */
+.icon {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.sun-icon {
+  color: #ff8c00;
+  animation: sun-rays 2s ease-in-out infinite;
+}
+
+.moon-icon {
+  color: #00d4ff;
+  animation: moon-glow 3s ease-in-out infinite;
+}
+
+@keyframes sun-rays {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+}
+
+@keyframes moon-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* Trailing Effect */
+.thumb-trail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.futuristic-toggle.day-mode .thumb-trail {
+  background: radial-gradient(circle, 
+    rgba(255, 215, 0, 0.3) 0%, 
+    transparent 70%
+  );
+}
+
+.futuristic-toggle.night-mode .thumb-trail {
+  background: radial-gradient(circle, 
+    rgba(0, 212, 255, 0.3) 0%, 
+    transparent 70%
+  );
+}
+
+/* Mode Indicators */
+.mode-indicators {
+  position: absolute;
+  inset: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.indicator {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.4;
+}
+
+.indicator.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.day-indicator {
+  color: #ffd700;
+}
+
+.night-indicator {
+  color: #00d4ff;
+}
+
+.star-field {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 50%;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.star:nth-child(1) {
+  top: 2px;
+  left: 5px;
+  animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+  top: 8px;
+  left: 2px;
+  animation-delay: 0.7s;
+}
+
+.star:nth-child(3) {
+  top: 6px;
+  left: 8px;
+  animation-delay: 1.4s;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Status Text */
+.status-text {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.mode-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.futuristic-toggle.day-mode .mode-label {
+  color: #ff8c00;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+}
+
+.futuristic-toggle.night-mode .mode-label {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+/* Hover Effects */
+.futuristic-toggle.hovered {
+  transform: translateY(-2px) scale(1.02);
+}
+
+.futuristic-toggle.hovered .thumb-trail {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.futuristic-toggle.hovered .holographic-layer {
+  opacity: 0.8;
+  animation-duration: 1.5s;
+}
+
+/* Pressed State */
+.futuristic-toggle.pressed {
+  transform: translateY(1px) scale(0.98);
+}
+
+.futuristic-toggle.pressed .thumb-inner {
+  transform: scale(0.95);
+}
+
+/* Ambient Glow */
+.ambient-glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 60px;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ambient-glow.day-glow {
+  background: radial-gradient(ellipse, 
+    rgba(255, 215, 0, 0.2) 0%, 
+    rgba(255, 140, 0, 0.1) 50%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+}
+
+.ambient-glow.night-glow {
+  background: radial-gradient(ellipse, 
+    rgba(0, 212, 255, 0.2) 0%, 
+    rgba(176, 38, 255, 0.1) 50%, 
+    transparent 100%
+  );
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .futuristic-toggle {
+    width: 160px;
+    height: 64px;
+  }
+  
+  .toggle-thumb {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .toggle-thumb.day-position {
+    left: calc(100% - 56px);
+  }
+  
+  .mode-indicators {
+    inset: 8px;
+  }
+  
+  .indicator {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Focus States for Accessibility */
+.futuristic-toggle:focus-visible {
+  outline: 2px solid #00d4ff;
+  outline-offset: 4px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .futuristic-toggle,
+  .toggle-thumb,
+  .holographic-layer,
+  .thumb-glow,
+  .thumb-inner,
+  .icon,
+  .thumb-trail,
+  .indicator,
+  .mode-label,
+  .ambient-glow {
+    animation: none;
+    transition-duration: 0.1s;
+  }
+}
