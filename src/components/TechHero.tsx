@@ -91,6 +91,7 @@ const TechHero: React.FC = () => {
       {/* Gradient Overlays */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-electric-blue/5 via-transparent to-cyber-purple/5 pointer-events-none"></div>
     </section>
+  )
   );
 };
 
