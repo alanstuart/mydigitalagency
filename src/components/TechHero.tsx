@@ -75,7 +75,7 @@ const TechHero: React.FC = () => {
               <div className="data-bar mt-3" style={{ '--progress': '99%' } as React.CSSProperties}></div>
             </div>
             <div className="glass p-4 md:p-6 rounded-lg holographic" style={{ animationDelay: '1s' }}>
-              <div className="text-2xl md:text-3xl font-bold text-neon-green mb-2"><100ms</div>
+              <div className="text-2xl md:text-3xl font-bold text-neon-green mb-2">{'<100ms'}</div>
               <div className="text-gray-300 font-mono text-xs md:text-sm">Response Time</div>
               <div className="data-bar mt-3" style={{ '--progress': '95%' } as React.CSSProperties}></div>
             </div>
