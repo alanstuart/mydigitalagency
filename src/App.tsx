@@ -1,41 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Services from './components/Services';
+import TechHeader from './components/TechHeader';
+import TechHero from './components/TechHero';
+import TechServices from './components/TechServices';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ParticleBackground from './components/ParticleBackground';
+import TechBackground from './components/TechBackground';
 import ErrorFallback from './components/ErrorFallback';
+import './styles/tech-theme.css';
 
 const App: React.FC = () => {
-  const [showParticles, setShowParticles] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
     document.title = "AlephSpark | Modern Web Development Solutions";
-    // Delay particle background initialization
+    // Delay background initialization
     const timer = setTimeout(() => {
-      setShowParticles(true);
+      setShowBackground(true);
     }, 100);
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <div className="font-space-grotesk text-white bg-gradient-to-b from-gray-900 via-purple-950 to-gray-900 min-h-screen overflow-hidden relative">
-      {showParticles && (
+    <div className="font-inter text-white min-h-screen overflow-x-hidden relative" style={{ background: 'var(--primary-bg)' }}>
+      {showBackground && (
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
           onReset={() => window.location.reload()}
         >
-          <ParticleBackground />
+          <TechBackground />
         </ErrorBoundary>
       )}
       <div className="relative z-10">
-        <Header />
+        <TechHeader />
         <main>
-          <Hero />
-          <Services />
+          <TechHero />
+          <TechServices />
           <Portfolio />
           <Contact />
         </main>

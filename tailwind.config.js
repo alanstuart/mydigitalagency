@@ -4,9 +4,14 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'space-grotesk': ['"Space Grotesk"', 'sans-serif'],
+        'inter': ['Inter', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', '"Fira Code"', 'monospace'],
       },
       colors: {
+        'electric-blue': '#00d4ff',
+        'neon-green': '#39ff14',
+        'cyber-purple': '#b026ff',
+        'tech-orange': '#ff6b35',
         primary: {
           50: '#f0f4ff',
           100: '#e0e9ff',
@@ -100,26 +105,39 @@ export default {
         },
       },
       backgroundImage: {
-        'hero-pattern': "url('https://images.pexels.com/photos/1169754/pexels-photo-1169754.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
-        'cta-pattern': "url('https://images.pexels.com/photos/4644803/pexels-photo-4644803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
+        'tech-grid': 'linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px)',
+      },
+      backgroundSize: {
+        'tech-grid': '20px 20px',
       },
       keyframes: {
         shimmer: {
           '100%': { transform: 'translateX(100%)' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-20px)' },
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '33%': { transform: 'translateY(-10px) rotate(1deg)' },
+          '66%': { transform: 'translateY(5px) rotate(-1deg)' },
         },
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
+        },
+        pulse: {
+          '0%, 100%': { opacity: 1, transform: 'scale(1)' },
+          '50%': { opacity: 0.8, transform: 'scale(1.05)' },
+        },
+        hologram: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
       animation: {
         shimmer: 'shimmer 2s infinite',
         float: 'float 6s ease-in-out infinite',
         fadeIn: 'fadeIn 1s ease-out',
+        pulse: 'pulse 2s ease-in-out infinite',
+        hologram: 'hologram 3s ease-in-out infinite',
       },
     },
   },
