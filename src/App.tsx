@@ -6,9 +6,11 @@ import TechServices from './components/TechServices';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ToggleDemo from './components/ToggleDemo';
 import TechBackground from './components/TechBackground';
 import ErrorFallback from './components/ErrorFallback';
 import './styles/tech-theme.css';
+import './styles/toggle-demo.css';
 
 const App: React.FC = () => {
   const [showBackground, setShowBackground] = useState(false);
@@ -37,6 +39,7 @@ const App: React.FC = () => {
         <main>
           <TechHero />
           <TechServices />
+          <ToggleDemo />
           <Portfolio />
           <Contact />
         </main>

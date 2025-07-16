@@ -61,7 +61,9 @@ const TechHeader: React.FC = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <div className="flex items-center space-x-4">
-              <FuturisticToggle onToggle={(isDayMode) => console.log('Mode:', isDayMode ? 'Day' : 'Night')} />
+              <div className="flex items-center space-x-3">
+                <FuturisticToggle onToggle={(isDayMode) => console.log('Mode:', isDayMode ? 'Day' : 'Night')} />
+              </div>
               <button className="cyber-btn text-sm">
                 <Zap size={16} className="inline mr-2" />
                 Initialize

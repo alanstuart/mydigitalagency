@@ -1,0 +1,368 @@
+/* Functional Toggle Button Styles */
+
+/* Wrapper */
+.functional-toggle-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Main Toggle Button */
+.functional-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Size Variants */
+.functional-toggle--small {
+  width: 44px;
+  height: 24px;
+  padding: 2px;
+}
+
+.functional-toggle--medium {
+  width: 56px;
+  height: 32px;
+  padding: 3px;
+}
+
+.functional-toggle--large {
+  width: 68px;
+  height: 40px;
+  padding: 4px;
+}
+
+/* Track (Background) */
+.functional-toggle__track {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.functional-toggle__track-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* Theme Colors - Default */
+.functional-toggle--default.functional-toggle--inactive .functional-toggle__track-fill {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.functional-toggle--default.functional-toggle--active .functional-toggle__track-fill {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-color: #2563eb;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Theme Colors - Success */
+.functional-toggle--success.functional-toggle--inactive .functional-toggle__track-fill {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.functional-toggle--success.functional-toggle--active .functional-toggle__track-fill {
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-color: #047857;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Theme Colors - Warning */
+.functional-toggle--warning.functional-toggle--inactive .functional-toggle__track-fill {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.functional-toggle--warning.functional-toggle--active .functional-toggle__track-fill {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-color: #b45309;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+}
+
+/* Theme Colors - Danger */
+.functional-toggle--danger.functional-toggle--inactive .functional-toggle__track-fill {
+  background: #e5e7eb;
+  border-color: #d1d5db;
+}
+
+.functional-toggle--danger.functional-toggle--active .functional-toggle__track-fill {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  border-color: #b91c1c;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+}
+
+/* Thumb (Sliding Circle) */
+.functional-toggle__thumb {
+  position: relative;
+  border-radius: 50%;
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+/* Thumb Sizes */
+.functional-toggle--small .functional-toggle__thumb {
+  width: 20px;
+  height: 20px;
+  transform: translateX(0);
+}
+
+.functional-toggle--medium .functional-toggle__thumb {
+  width: 26px;
+  height: 26px;
+  transform: translateX(0);
+}
+
+.functional-toggle--large .functional-toggle__thumb {
+  width: 32px;
+  height: 32px;
+  transform: translateX(0);
+}
+
+/* Thumb Active Position */
+.functional-toggle--small.functional-toggle--active .functional-toggle__thumb {
+  transform: translateX(20px);
+}
+
+.functional-toggle--medium.functional-toggle--active .functional-toggle__thumb {
+  transform: translateX(24px);
+}
+
+.functional-toggle--large.functional-toggle--active .functional-toggle__thumb {
+  transform: translateX(28px);
+}
+
+/* Thumb Inner Content */
+.functional-toggle__thumb-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.functional-toggle--active .functional-toggle__thumb-inner {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Ripple Effect */
+.functional-toggle__ripple {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.functional-toggle--pressed .functional-toggle__ripple {
+  opacity: 0.1;
+  transform: scale(1);
+}
+
+/* State Indicators */
+.functional-toggle__indicators {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.functional-toggle__indicator {
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.functional-toggle--large .functional-toggle__indicator {
+  font-size: 9px;
+}
+
+.functional-toggle--active .functional-toggle__indicator--on {
+  opacity: 1;
+}
+
+.functional-toggle--inactive .functional-toggle__indicator--off {
+  opacity: 1;
+  color: #6b7280;
+}
+
+/* Hover States */
+.functional-toggle:not(.functional-toggle--disabled):hover {
+  transform: translateY(-1px);
+}
+
+.functional-toggle:not(.functional-toggle--disabled):hover .functional-toggle__thumb {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.functional-toggle--active:not(.functional-toggle--disabled):hover .functional-toggle__track-fill {
+  filter: brightness(1.1);
+}
+
+/* Focus States */
+.functional-toggle--focused {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.functional-toggle--focused .functional-toggle__thumb {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2), 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Pressed State */
+.functional-toggle--pressed {
+  transform: scale(0.98);
+}
+
+.functional-toggle--pressed .functional-toggle__thumb {
+  transform: scale(0.95);
+}
+
+.functional-toggle--small.functional-toggle--pressed.functional-toggle--active .functional-toggle__thumb {
+  transform: translateX(20px) scale(0.95);
+}
+
+.functional-toggle--medium.functional-toggle--pressed.functional-toggle--active .functional-toggle__thumb {
+  transform: translateX(24px) scale(0.95);
+}
+
+.functional-toggle--large.functional-toggle--pressed.functional-toggle--active .functional-toggle__thumb {
+  transform: translateX(28px) scale(0.95);
+}
+
+/* Disabled State */
+.functional-toggle--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.functional-toggle--disabled .functional-toggle__track-fill {
+  background: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+
+.functional-toggle--disabled .functional-toggle__thumb {
+  background: #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Label */
+.functional-toggle__label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  user-select: none;
+}
+
+.functional-toggle__label:hover {
+  color: #111827;
+}
+
+.functional-toggle__label--disabled {
+  color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Screen Reader Only Description */
+.functional-toggle__description {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .functional-toggle--default.functional-toggle--inactive .functional-toggle__track-fill {
+    background: #374151;
+    border-color: #4b5563;
+  }
+  
+  .functional-toggle__label {
+    color: #d1d5db;
+  }
+  
+  .functional-toggle__label:hover {
+    color: #f9fafb;
+  }
+  
+  .functional-toggle--inactive .functional-toggle__indicator--off {
+    color: #9ca3af;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .functional-toggle,
+  .functional-toggle__track-fill,
+  .functional-toggle__thumb,
+  .functional-toggle__thumb-inner,
+  .functional-toggle__ripple,
+  .functional-toggle__indicator,
+  .functional-toggle__label {
+    transition-duration: 0.1s;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .functional-toggle__track-fill {
+    border-width: 3px;
+  }
+  
+  .functional-toggle--focused {
+    outline-width: 3px;
+  }
+}
+
+/* Mobile Touch Improvements */
+@media (max-width: 768px) {
+  .functional-toggle {
+    min-height: 44px; /* Minimum touch target size */
+    min-width: 44px;
+  }
+  
+  .functional-toggle__ripple {
+    inset: -12px; /* Larger ripple on mobile */
+  }
+}
