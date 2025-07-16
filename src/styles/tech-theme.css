@@ -145,7 +145,7 @@
   background: transparent;
   border: 2px solid var(--electric-blue);
   color: var(--electric-blue);
-  padding: 12px 24px;
+  padding: 8px 16px;
   font-family: var(--font-primary);
   font-weight: 600;
   text-transform: uppercase;
@@ -153,6 +153,14 @@
   cursor: pointer;
   transition: all 0.3s ease;
   overflow: hidden;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .cyber-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
 }
 
 .cyber-btn::before {
