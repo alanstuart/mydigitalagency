@@ -33,7 +33,7 @@ const TechHero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-4xl mx-auto pt-8 md:pt-0">
+        <div className="max-w-4xl mx-auto pt-32">
           {/* Status Indicator */}
           <div className="inline-flex items-center px-3 py-2 md:px-4 md:py-2 rounded-full glass glow-blue mb-6 md:mb-8 text-xs md:text-sm">
             <div className="w-2 h-2 bg-neon-green rounded-full pulse mr-3"></div>
