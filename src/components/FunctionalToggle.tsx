@@ -34,6 +34,10 @@ const FunctionalToggle: React.FC<FunctionalToggleProps> = ({
   const [isPressed, setIsPressed] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
+  useEffect(() => {
+    setIsActive(initialState);
+  }, [initialState]);
+
   // Handle toggle state change
   const handleToggle = useCallback(() => {
     if (disabled) return;
